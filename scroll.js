@@ -5,11 +5,11 @@ document.addEventListener("DOMContentLoaded", function() {
         link.addEventListener("click", function(event) {
           event.preventDefault();
 
-          var target = document.getElementById("versions");
+          var target = document.getElementsByClassName("version-line");
 
           var offset = target.offsetTop;
 
-          target.scrollIntoView({
+          target.item(0).scrollIntoView({
             behavior: "smooth",
             block: "start"
           });

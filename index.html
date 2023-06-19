@@ -9,6 +9,7 @@
     <meta content="#2CA63D" data-react-helmet="true" name="theme-color" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="logo.png">
     <title>Bewisclient</title>
     <style>
         #div_all {
@@ -26,6 +27,8 @@
             background-position: center;
             background-position-y: top;
             background-attachment: fixed;
+            background-blend-mode: color;
+            background-color: #00000065;
         }
         #name {
             font-size: 100px;
@@ -93,12 +96,10 @@
         }
 
         .version-container {
-            background-color: #b8b8b8;
             padding: 10px;
         }
 
         .text-container {
-            background-color: #b8b8b8;
             padding: 10px;
         }
 
@@ -228,6 +229,15 @@
     </style>
 </head>
 <body>
+    <div id="logo"></div>
+    <script>
+        var parallaxContainer = document.getElementById("logo");
+
+        window.addEventListener('scroll', function() {
+           var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+           parallaxContainer.style.transform = 'translateY(' + (scrollTop / 2) + 'px)';
+        });
+    </script>
     <div id="top", style="position: absolute; top: 0; left: 0; width: 100%;"></div>
     <div>
         <div id="div_all">
@@ -285,7 +295,7 @@
             <script src="script.js"></script>
         </div>
         <hr id="space">
-        <div id="headline">
+        <div id="headline", class="version-line">
             Versions
         </div>
 
@@ -329,6 +339,5 @@
         <script src="script.js"></script>
     </a>
     <script src="scroll.js"></script>
-    <div id="logo"></div>
 </body>
 </html>

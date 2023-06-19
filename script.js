@@ -8,8 +8,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     function slideTo(index) {
       slideshowTrack.style.transform = "translateX(-" + (((index) * slideWidth)) + "px)";
     }
-
-    console.log(slideWidth);
   
     function nextSlide() {
       currentIndex = (currentIndex + 1) % (slides.length);
