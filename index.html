@@ -182,9 +182,9 @@
             background-image: url(logo.png);
             width: 200px;
             height: 200px;
+            margin-top: 10%;
             margin-left: auto;
             margin-right: auto;
-            margin-top: 10%;
         }
 
         #space {
@@ -228,6 +228,7 @@
     </style>
 </head>
 <body>
+    <div id="top", style="position: absolute; top: 0; left: 0; width: 100%;"></div>
     <div>
         <div id="div_all">
             <div>
@@ -316,17 +317,18 @@
             </b>
         </div>
     </div>
-    <a href="#downloads">
+    <a href="#", id="smooth-scroll-link">
         <div class="top_clicker">
             Downloads
         </div>
     </a>
-    <a href="#top">
+    <a href="#", id="smooth-scroll-link-2">
         <div class="top_clicker hidden" style="margin-left: 100px;">
             To the top
         </div>
         <script src="script.js"></script>
     </a>
+    <script src="scroll.js"></script>
     <div id="logo"></div>
 </body>
 </html>
