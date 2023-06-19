@@ -166,6 +166,10 @@
           }
         }
 
+        #spacing {
+            height: 80px;
+        }
+
         #logo {
             background-image: url(logo.png);
             width: 200px;
@@ -175,6 +179,44 @@
             margin-top: 10%;
         }
 
+        #space {
+            width: 700px;
+        }
+
+        @media screen and (max-width: 767px) {
+            #name {
+                font-size: 50px;
+            }
+
+            #spacing {
+                height: 20px;
+            }
+
+            #text {
+                font-size: 12px;
+                width: 100%;
+            }
+
+            #space {
+                width: 100%;
+            }
+
+            .version-link {
+                font-size: 12px;
+                width: 90%;
+            }
+
+            .slideshow-container {
+                height: 200px;
+            }
+
+            .slide {
+                height: 180px;
+                flex: 0 0 342px;
+                transform: translateX(724px)
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -182,9 +224,9 @@
         <div id="div_all">
             <div>
                 <div id="headline">
-                    <p style="height: 1px;">
+                    <div id="spacing">
 
-                    </p>
+                    </div>
                     Description
                 </div>
                 <div class="text-container">
@@ -193,7 +235,7 @@
                     </div>
                 </div>
           </div>
-          <hr style="width:700px">
+          <hr id="space">
           <div>
               <div id="headline">
                   Features
@@ -216,7 +258,7 @@
               </div>
               </div>
         </div>
-        <hr style="width:700px">
+        <hr id="space">
         <div>
             <div id="headline">
                 Gallery
@@ -233,7 +275,7 @@
           
             <script src="script.js"></script>
         </div>
-        <hr style="width:700px">
+        <hr id="space">
         <div id="headline">
             Versions
         </div>
@@ -248,7 +290,7 @@
 
           <script src="download.js"></script>
         </div>
-        <hr style="width:700px">
+        <hr id="space">
         <div>
             <div id="headline">
                 Links

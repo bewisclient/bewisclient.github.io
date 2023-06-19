@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     function slideTo(index) {
       slideshowTrack.style.transform = "translateX(-" + (((index) * slideWidth)) + "px)";
     }
+
+    console.log(slideWidth);
   
     function nextSlide() {
       currentIndex = (currentIndex + 1) % (slides.length);
@@ -21,8 +23,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   window.addEventListener('scroll', function() {
     var position = document.getElementById("name").getBoundingClientRect().top;
     var screenHeight = window.innerHeight;
-
-    console.log(position+", "+screenHeight)
   
     if (position < screenHeight -1000) {
       var element = document.querySelector('.hidden');
