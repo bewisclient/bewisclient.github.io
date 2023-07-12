@@ -8,7 +8,7 @@
   {
     "image": "bug_color_display",
     "date": "2023-07-12",
-    "title": "Bug found",
-    "text": "A bug was found in the ConfigScreen. The Color display is not rendering correctly. This will be changed in the next version, but as long as the version isn't released, you have to life with the bug. Have fun with Bewisclient"
+    "title": "Two Bugs found",
+    "text": "A minor issue has been discovered in the ConfigScreen, affecting the color display rendering. Additionally, the update checker has encountered a glitch, continuously displaying a new update notification. Rest assured, these issues will be addressed in the upcoming version. Until then, we kindly ask for your patience and understanding while using Bewisclient. Enjoy your experience!"
   }
 ]
