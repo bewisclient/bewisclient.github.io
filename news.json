@@ -8,7 +8,7 @@
   {
     "image": "bug_color_display",
     "date": "2023-07-12",
-    "title": "New Options Screen",
+    "title": "Bug found",
     "text": "A bug was found in the ConfigScreen. The Color display is not rendering correctly. This will be changed in the next version, but as long as the version isn't released, you have to life with the bug. Have fun with Bewisclient"
   }
 ]
