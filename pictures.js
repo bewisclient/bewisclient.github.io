@@ -20,3 +20,12 @@ image.addEventListener("click",function() {click(true)});
 
 const image1 = document.getElementById("button-down");
 image1.addEventListener("click",function() {click(false)});
+
+click(true);
+click(true);
+click(true);
+click(true);
+click(true);
+
+const img = document.getElementById("image");
+img.classList.add("show-image");
