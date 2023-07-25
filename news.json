@@ -6,15 +6,15 @@
     "text":"Great news for Bewisclient players! The highly-anticipated beta phase of the Customizable Crosshair is here! Your feedback will help refine this fantastic feature. Elevate your Minecraft experience with personalized crosshairs. More updates coming soon. Happy gaming!"
   },
   {
-    "image": "new_option_screen",
-    "date": "2023-07-07",
-    "title": "New Options Screen",
-    "text": "Experience the ease of customization with the new Enhanced Options Screen. Designed to simplify the process, this user-friendly interface allows you to effortlessly adjust settings. With organized sections, helpful tooltips, and a search function, finding and modifying specific features has never been easier. Personalize your Bewisclient experience with confidence and make the most of your gameplay."
-  },
-  {
     "image": "bug_color_display",
     "date": "2023-07-12",
     "title": "Two Bugs found",
     "text": "A minor issue has been discovered in the ConfigScreen, affecting the color display rendering. Additionally, the update checker has encountered a glitch, continuously displaying a new update notification. Rest assured, these issues will be addressed in the upcoming version. Until then, we kindly ask for your patience and understanding while using Bewisclient. Enjoy your experience!"
+  },
+  {
+    "image": "new_option_screen",
+    "date": "2023-07-07",
+    "title": "New Options Screen",
+    "text": "Experience the ease of customization with the new Enhanced Options Screen. Designed to simplify the process, this user-friendly interface allows you to effortlessly adjust settings. With organized sections, helpful tooltips, and a search function, finding and modifying specific features has never been easier. Personalize your Bewisclient experience with confidence and make the most of your gameplay."
   }
 ]
