@@ -96,6 +96,7 @@
             width: 100%;
             height:calc(100vh - 120px);
             overflow-y:auto;
+            overflow-x: hidden;
         }
         #image-container {
             height: 100%;
@@ -112,7 +113,11 @@
                 font-size: 10px;
             }
             .image {
-                width: calc(100vi - 170px);
+                width: calc(100vi - 190px);
+                height: calc(((100vi - 190px)*9)/16);
+            }
+            #images {
+                height:calc(100vh - ((100vi - 170px)/6 + 20px));
             }
         }
     </style>
