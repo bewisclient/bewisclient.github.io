@@ -2,273 +2,342 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta content="Bewisclient" property="og:title" />
+    <meta content="A minecraft client for fabric" property="og:description" />
+    <meta content="hhtps://bewisclient.github.io" property="og:url" />
+    <meta content="option_background.png" property="og:image" />
+    <meta content="#2CA63D" data-react-helmet="true" name="theme-color" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="logo.png">
     <title>Bewisclient</title>
     <style>
-        #sidebar {
-            width: 150px;
-            height: 100vh;
-            background-color: green;
-            position: fixed;
-            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-            z-index: 2;
-        }
-        #main {
-            width: calc(100vi - 150px);
-            float: right;
+        #div_all {
             position: absolute;
-            right: 0;
-            background-color: rgb(3, 141, 3);
+            height: fit-content;
+            top: 60%;
+            left: 0px;
+            width: 100%;
+            text-align: center;
+            background-color: white;
         }
         body {
-            margin: 0;
-            display: flex;
-            overflow: hidden;
+            background-image: url(option_background.png);
+            background-size: 2000px;
+            background-position: center;
+            background-position-y: top;
+            background-attachment: fixed;
+            background-blend-mode: color;
+            background-color: #00000065;
         }
-        .part {
-            padding: 10px;
-            background-color: rgb(25, 184, 19);
-            border-radius: 5px;
-            margin: 10px;
-            color: black;
-            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            transition: padding 0.2s, background-color 0.2s;
-        }
-        .part:hover {
-            background-color: rgb(32, 204, 26);
-            padding: 15px;
-        }
-        #start-div {
-            font-size: calc((100vi - 150px)/8);
-            color: white;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            text-align: center;
-            margin-top: 25vh;
-            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-            padding-bottom: 30px;
-            width: calc(100vi - 150px);
-        }
-        .headline {
+        #name {
             font-size: 100px;
-            height: 120px;
-            color: white;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             text-align: center;
-            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-            width: calc(100vi - 150px);
-        }
-        #logo-side {
-            width: 100px;
-            margin: 25px;
-            height: 100px;
+            margin: auto;
+            top: 55%;
+            left: 0;
+            padding: 0 10px;
+            right: 0;
             position: absolute;
-            bottom: 0px;
-            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-            transition: width 0.2s, height 0.2s, margin 0.2s;
+            border: 4px solid #FFFFFF;
+            background-color: rgb(223, 223, 223);
+            width: fit-content;
+            border-radius: 10px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
-        #text-div {
+        #headline {
+            text-align: center;
+            font-size: 50px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #text {
+            text-align: center;
+            width: 700px;
+            margin: auto;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             font-size: 20px;
-            padding: 15px;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            color: white;
         }
-        #logo-side:hover {
-            height: 120px;
-            width: 120px;
-            margin: 15px;
+        #image {
+            width: 150px;
+            height: auto;
+            filter: grayscale(100%);
+            border-radius: 10px;
+            border: 2px solid #000000;
+            padding: 5px;
+            background-color: #FFFFFF;
+            transition: filter 0.3s ease;
         }
-        #text-small {
-            font-size: calc((100vi - 150px)/40);
+        #image:hover {
+            filter: grayscale(0%);
         }
-        .image {
+        .slideshow-container {
+          width: 100%;
+          height: 320px;
+          overflow: hidden;
+          margin: auto;
+          background-color: #b8b8b8;
+          position: relative;
+        }
+
+        .slideshow-track {
+          display: flex;
+          justify-content: center;
+          transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+          flex: 0 0 570px;
+          height: 300px;
+          overflow: hidden;
+          border-radius: 10px;
+          padding: 10px;
+          object-fit: cover;
+          transform: translateX(1180px)
+        }
+
+        .version-container {
+            padding: 10px;
+        }
+
+        .text-container {
+            padding: 10px;
+        }
+
+        .version-link {
+            display: block;
+            background-color: #20a327;
+            padding: 10px;
+            border-radius: 10px;
             width: 400px;
-            height: 225px;
-            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-            margin: 15px;
-        }
-        #images {
-            justify-content: center;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: flex-start;
-            width: 100%;
-            height:calc(100vh - 120px);
-            overflow-y:auto;
-        }
-        #image-container {
-            height: 100%;
-        }
-        a {
             text-decoration: none;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: auto;
+            color: white;
+            margin-bottom: 10px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
         }
+
+        .version-link:hover {
+            filter:brightness(80%);
+        }
+
+        .version-link.show {
+            opacity: 1;
+        }
+
+        .version-link.hide {
+            opacity: 0;
+        }
+
+        .version-link.there {
+            opacity: 1;
+        }
+
+        .button_all {
+            padding: 5px;
+            background-color: #b8b8b8;
+            border-radius: 5px;
+        }
+
+        .button_all:hover {
+            background-color: #9c9c9c;
+        }
+
+        .top_clicker {
+            position: fixed;
+            top: 5px;
+            color: rgb(0, 0, 0);
+            padding-left: 5px;
+            padding-right: 5px;
+            border-radius: 5px;
+            background-color: #FFFFFF;
+            font-size: large;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        .top_clicker.hidden {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .top_clicker.visible {
+            opacity: 1;
+            animation: fade-in 0.3s;
+        }
+
+        @keyframes fade-in {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+
+        #spacing {
+            height: 80px;
+        }
+
+        #logo {
+            background-image: url(logo.png);
+            width: 200px;
+            height: 200px;
+            margin-top: 10%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #space {
+            width: 700px;
+        }
+
+        @media screen and (max-width: 767px) {
+            #name {
+                font-size: 50px;
+            }
+
+            #spacing {
+                height: 30px;
+            }
+
+            #text {
+                font-size: 12px;
+                width: 90%;
+            }
+
+            #space {
+                width: 99%;
+            }
+
+            .version-link {
+                font-size: 12px;
+                width: 90%;
+            }
+
+            .slideshow-container {
+                height: 170px;
+            }
+
+            .slide {
+                height: 250px;
+                flex: 0 0 285px;
+                transform: translateX(610px)
+            }
+        }
+
     </style>
 </head>
 <body>
-    <div id="sidebar">
-        <b>
-            <a href="#description-div">
-                <div class="part">
-                        Description
-                </div>
-            </a>
-            <a href="#gallery-div">
-                <div class="part">
-                        Gallery
-                </div>
-            </a>
-            <a href="#download-div">
-                <div class="part">
-                        Download
-                </div>
-            </a>
-            <a href="#links-div">
-                <div class="part">
-                        Links
-                </div>
-            </a>
-            <a href="#features-div">
-                <div class="part">
-                        Features
-                </div>
-            </a>
-            <a href="#news-div">
-                <div class="part">
-                        News
-                </div>
-            </a>
-            <script>
-                window.addEventListener("hashchange", function() {
-                    change();
-                });
-
-                change();
-
-                function change() {
-                    var s = document.getElementsByClassName("part");
-                    for (let index = 0; index < s.length; index++) {
-                        const element = s[index];
-                        element.style.backgroundColor = "#19b813";
-                        if(element.parentElement.href == window.location) {
-                            element.style.backgroundColor = "#97db00";
-                        }
-                    }
-                }
-            </script>
-        </b>
-        <a href="#">
-            <img src="logo.png" id="logo-side">
-        </a>
-    </div>
-    <div id="main">
-        <div style="height: 100vh;">
-            <div id="start-div">
-                <b>
-                    Bewisclient
-                    <div id="text-small">
-                        Brighter Vision, Epic Features!
-                    </div>
-                </b>
-            </div>
-        </div>
-        <div style="height: 300vh;">
-            <div id="description-div">
-                <b>
-                    <div class="headline">
-                        Bewisclient
-                    </div>
-                    <div id="text-div">
-                    Bewisclient is an innovative Minecraft fabric mod that enriches gameplay with features like Fullbright, Shulkerbox Tooltip, Custom Blockhit, on-screen widgets, improved visibility, Held Item Info, and more. Its user-friendly Mod Menu and support for multiple translations make it a great addition to any modpack. Credit to various sources for inspiration and code implementation. Elevate your Minecraft experience with Bewisclient!
-                    <br>
-                    <br>
-                    Here are some of the features of Bewisclient:
-                    <br>
-                    <br>
-                    - Fullbright: &nbsp;This feature makes the game world completely bright, even in dark areas. This can be helpful for exploring caves or fighting mobs at night.
-                    <br>
-                    - Shulkerbox Tooltip: &nbsp;This feature shows a tooltip when you hover over a Shulkerbox, displaying the contents of the box. This can be helpful for inventory management.
-                    <br>
-                    - On-screen widgets: &nbsp;This feature allows you to display information on the screen, such as your biome, fps, and coordinates.
-                    <br>
-                    - Held Item Info: &nbsp;This feature shows information about the item you are holding, such as its enchantments.
-                    <br>
-                    <br>
-                    Bewisclient is a great mod for anyone who wants to enhance their Minecraft experience. It is easy to use and has a wide range of features that can make the game more enjoyable.
-                    </div>
-                </b>
-            </div>
-        </div>
-        <div style="height: 100vh;">
-            <div id="gallery-div">
-                <b>
-                    <div class="headline">
-                        Bewisclient
-                    </div>
-                    <div id="image-container">
-                        <div id="images">
-                            <img src="bild1.webp" class="image">
-                            <img src="bild2.png" class="image">
-                            <img src="bild3.webp" class="image">
-                            <img src="bild4.png" class="image">
-                            <img src="bild5.png" class="image">
-                            <img src="bild6.png" class="image">
-                            <img src="bild7.png" class="image">
-                            <img src="bild8.png" class="image">
-                            <img src="bild9.png" class="image">
-                        </div>
-                    </div>
-                </b>
-            </div>
-        </div>
-        <div style="height: 200vh;"></div>
-        <div style="height: 300vh;">
-            <div id="download-div">
-                <b>
-                    <div class="headline">
-                        Bewisclient
-                    </div>
-                </b>
-            </div>
-        </div>
-        <div style="height: 300vh;">
-            <div id="links-div">
-                <b>
-                    <div class="headline">
-                        Bewisclient
-                    </div>
-                </b>
-            </div>
-        </div>
-        <div style="height: 300vh;">
-            <div id="features-div">
-                <b>
-                    <div class="headline">
-                        Bewisclient
-                    </div>
-                </b>
-            </div>
-        </div>
-        <div style="height: 300vh;">
-            <div id="news-div">
-                <b>
-                    <div class="headline">
-                        Bewisclient
-                    </div>
-                </b>
-            </div>
-        </div>
-    </div>
+    <div id="logo"></div>
     <script>
-        window.addEventListener('resize', function() {
-            var currentAnchor = window.location.hash.substring(1);
-            if (currentAnchor) {
-              var anchorElement = document.getElementById(currentAnchor);
-            
-              if (anchorElement) {
-                anchorElement.scrollIntoView({ block: 'start' });
-              }
-            }
+        var parallaxContainer = document.getElementById("logo");
+
+        window.addEventListener('scroll', function() {
+           var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+           parallaxContainer.style.transform = 'translateY(' + (scrollTop / 2) + 'px)';
         });
     </script>
+    <div id="top", style="position: absolute; top: 0; left: 0; width: 100%;"></div>
+    <div>
+        <div id="div_all">
+            <div>
+                <div id="headline">
+                    <div id="spacing">
+
+                    </div>
+                    Description
+                </div>
+                <div class="text-container">
+                    <div id="text">
+                        Bewisclient is a Minecraft fabric mod, which has many features that clients like Badlion Client or Lunar Client, but it can be added to all fabric modpacks. It does not boost performance, but its compatible with sodium, so you can get a decent boost. With Iris you can play with shaders. 
+                    </div>
+                </div>
+          </div>
+          <hr id="space">
+          <div>
+              <div id="headline">
+                  Features
+              </div>
+              <div class="text-container">
+                <div id="text">
+                    Fullbright <br>
+                    Shulkerbox Tooltip<br>
+                    Custom Blockhit (Outline)<br>
+                    More Widgets on the Screen (for Example Coordinates, Biome, etc.)<br>
+                    Better Visibility under Fluids (lava, water, powdersnow, etc) and in the nether<br>
+                    Pumpkin Overlay Disabled<br>
+                    Held Item Infos<br>
+                    Mod menu<br>
+                    Cosmetics<br>
+                    Zoom<br>
+                    Scoreboard Size<br>
+                    Macros (Executable Command Chains)<br>
+                    Cleaner Debug menu<br>
+              </div>
+              </div>
+        </div>
+        <hr id="space">
+        <div>
+            <div id="headline">
+                Gallery
+            </div>
+            <div class="slideshow-container">
+              <div class="slideshow-track">
+                <img class="slide" src="bild1.webp">
+                <img class="slide" src="bild2.png">
+                <img class="slide" src="bild3.webp">
+                <img class="slide" src="bild4.png">
+                <img class="slide" src="bild5.png">
+              </div>
+            </div>
+          
+            <script src="script.js"></script>
+        </div>
+        <hr id="space">
+        <div id="headline", class="version-line">
+            Versions
+        </div>
+
+        <h2 id="downloads"></h2>
+        <div class="version-container">
+          <div id="versions"></div>
+        
+          <button class="button_all" onclick="getModVersions(true)">
+              Show all
+          </button>
+
+          <script src="download.js"></script>
+        </div>
+        <hr id="space">
+        <div>
+            <div id="headline">
+                Links
+            </div>
+            <div class="text-container">
+                <a href="https://www.youtube.com/@bewis09/"><img id="image" src="youtube.png"></a> <br>
+                <a href="https://www.modrinth.com/mod/bewisclient"><img id="image" src="modrinth.png"></a> <br>
+                <a href="https://legacy.curseforge.com/minecraft/mc-mods/bewisclient"><img id="image" src="curseforge.png"></a>
+            </div>
+        </div>
+        </div>
+        <div id="name">
+            <b>
+                Bewisclient
+            </b>
+        </div>
+    </div>
+    <a href="#", id="smooth-scroll-link">
+        <div class="top_clicker">
+            Downloads
+        </div>
+    </a>
+    <a href="#", id="smooth-scroll-link-2">
+        <div class="top_clicker hidden" style="margin-left: 100px;">
+            To the top
+        </div>
+        <script src="script.js"></script>
+    </a>
+    <script src="scroll.js"></script>
 </body>
 </html>
