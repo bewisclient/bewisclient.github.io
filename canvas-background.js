@@ -16,7 +16,6 @@ e = null;
 
 MousePosX = null;
 MousePosY = null;
-
 function getNewSpeedY() {
     return Math.sqrt((2/5)*(window.innerHeight*(Math.random()/2+1/2)+100));
 }
@@ -28,6 +27,7 @@ function coords(event) {
 }
 
 function draw() {
+
     var c = document.getElementById("canvas-background");
     var ctx = c.getContext("2d");
     const width = window.innerWidth;
@@ -38,12 +38,12 @@ function draw() {
     c.width = width;
     c.height = height;
 
-    var grd = ctx.createRadialGradient(width/2, height/2, radian/2, width/2, height/2,radian);
+    var grd = ctx.createRadialGradient(width/2, height/3, radian/2, width/2, height/3,radian);
     grd.addColorStop(0, "#28324b");
     grd.addColorStop(1, "#181f3d");
 
     ctx.beginPath();
-    ctx.arc(width/2, height/2, radian, 0, 2 * Math.PI);
+    ctx.arc(width/2, height/3, radian, 0, 2 * Math.PI);
 
     ctx.fillStyle = grd;
 
@@ -61,7 +61,10 @@ function draw() {
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     ctx.fillStyle = "#fff";
-    ctx.fillText("Bewisclient", width/2, height/2);
+    ctx.fillText("Bewisclient", width/2, height/3);
+    
+    ctx.font = "bold "+radian/20+ "px Arial Black";
+    ctx.fillText("Brighter Vision, Epic Features", width/2, height/3+radian/10);
 
     ctx.shadowColor = 'transparent';
     
@@ -112,7 +115,7 @@ function draw() {
     requestAnimationFrame(draw);
 }
 
-function drawCircle(ctx, width, height, posX, posY, size, fade, type) {
+function drawCircle(ctx, width, height, posX, posY, size, fade, type) {   
 
     dist = ((MousePosX-(width*posX))*(MousePosX-(width*posX))+
         (MousePosY-(height-posY))*(MousePosY-(height-posY)))<size*size;

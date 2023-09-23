@@ -7,9 +7,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <canvas id="canvas-background" onmousemove="coords(event)">
-        
-    </canvas>
+    <div id="main">
+        <canvas id="canvas-background" onmousemove="coords(event)"></canvas>
+    </div>
     <script src="canvas-background.js"></script>
+    <div class="bottom" id="bottom">
+        <div id="links">
+            <a class="a-link" href="https://github.com/Bewis09/bewisclient/"><img class="link" src="github.png"></a>
+            <a class="a-link" href="https://modrinth.com/mod/bewisclient/"><img class="link" src="modrinth.png"></a>
+            <a class="a-link" href="https://www.youtube.com/@bewis09"><img class="link" src="youtube.png"></a>
+        </div>
+        <div id="github">
+            Built with <a href="https://github.io">Github Pages</a>
+        </div>
+    </div>
+    <a id="scroll" href="#bottom"><img id="scroll_image" width="20px" height="20px" src="down.png"></a>
+    <script src="scroll-bottom.js"></script>
 </body>
 </html>

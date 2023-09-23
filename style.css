@@ -4,12 +4,65 @@
 
 body {
     background-color: var(--background-default);
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
     padding: 0;
     margin: 0;
 }
 
 #canvas-background {
-    position: absolute;
     overflow: hidden;
+    position: fixed;
+}
+
+.bottom {
+    position: absolute;
+    top: 100vh;
+    color: white;
+    text-align: center;
+    width: 100vi;
+    background-color: black;
+}
+
+#scroll {
+    position: absolute;
+    bottom: 5px;
+    box-shadow: 10px;
+    left: calc(50vi - 10px);
+    transition: rotate 0.3s;
+}
+
+.main {
+    height: 100vh;
+    position: fixed;
+}
+
+.a-link {
+    margin: 10px;
+}
+
+#links {
+    justify-content: center;
+    display: flex;
+    font-size: 20px;
+    font-family:'Overpass',sans-serif;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+}
+
+#github {
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 25px;
+}
+
+.link {
+    width: 70px;
+    height: 70px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
 }
