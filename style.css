@@ -24,6 +24,7 @@ body {
 }
 
 .m-link {
+    padding-top: 10px;
     overflow: hidden;
     transition: opacity 0.3s;
     transition: width 0.3s;
