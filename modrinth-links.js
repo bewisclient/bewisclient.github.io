@@ -8,6 +8,10 @@ element.addEventListener('mouseover', function() {
     element.style.width="146px";
     p1.style.opacity = "1";
     p2.style.opacity = "1";
+    setInterval(() => {
+        p1.href = "https://modrinth.com/mod/bewisclient/";
+        p2.href = "https://modrinth.com/modpack/bewisclient-pack/";
+    }, 200);
 });
 
 element.addEventListener('mouseout', function() {
@@ -15,4 +19,6 @@ element.addEventListener('mouseout', function() {
     element.style.width="90px";
     p1.style.opacity = "0";
     p2.style.opacity = "0";
+    p1.href = "";
+    p2.href = "";
 });
