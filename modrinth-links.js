@@ -19,6 +19,6 @@ element.addEventListener('mouseout', function() {
     element.style.width="90px";
     p1.style.opacity = "0";
     p2.style.opacity = "0";
-    p1.href = "";
-    p2.href = "";
+    p1.href = "#"+window.location.hash.substring(1);
+    p2.href = "#"+window.location.hash.substring(1);
 });
