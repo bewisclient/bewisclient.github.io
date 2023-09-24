@@ -8,8 +8,6 @@ element.addEventListener('mouseover', function() {
     element.style.width="146px";
     p1.style.opacity = "1";
     p2.style.opacity = "1";
-    p1.style.width = "70px";
-    p2.style.width = "70px";
 });
 
 element.addEventListener('mouseout', function() {

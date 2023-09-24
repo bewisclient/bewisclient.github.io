@@ -19,6 +19,7 @@ body {
 #modrinth-div {
     display: flex;
     height: 95px;
+    width: 90px;
     transition: width 0.1s;
 }
 
@@ -26,6 +27,7 @@ body {
     overflow: hidden;
     transition: opacity 0.3s;
     transition: width 0.3s;
+    opacity: 0;
 }
 
 .a-link {
