@@ -16,6 +16,30 @@ body {
     position: fixed;
 }
 
+#modrinth-div {
+    display: flex;
+    height: 95px;
+    transition: width 0.1s;
+}
+
+.m-link {
+    overflow: hidden;
+    transition: opacity 0.3s;
+    transition: width 0.3s;
+}
+
+.a-link {
+    margin: 10px;
+}
+
+#m-1 {
+    float: left;
+}
+
+#m-2 {
+    float: right;
+}
+
 .bottom {
     position: absolute;
     top: var(--all-height);
@@ -36,10 +60,6 @@ body {
 .main {
     height: 100vh;
     position: fixed;
-}
-
-.a-link {
-    margin: 10px;
 }
 
 #links {
