@@ -1,5 +1,7 @@
 const element = document.getElementById('modrinth-div');
 const modrinth = document.getElementById('modrinth');
+const a1 = document.getElementById('a-1');
+const a2 = document.getElementById('a-2');
 const p1 = document.getElementsByClassName('m-link')[0];
 const p2 = document.getElementsByClassName('m-link')[1];
 
@@ -9,8 +11,8 @@ element.addEventListener('mouseover', function() {
     p1.style.opacity = "1";
     p2.style.opacity = "1";
     setInterval(() => {
-        p1.href = "https://modrinth.com/mod/bewisclient/";
-        p2.href = "https://modrinth.com/modpack/bewisclient-pack/";
+        a1.href = "https://modrinth.com/mod/bewisclient/";
+        a2.href = "https://modrinth.com/modpack/bewisclient-pack/";
     }, 200);
 });
 
@@ -19,6 +21,6 @@ element.addEventListener('mouseout', function() {
     element.style.width="90px";
     p1.style.opacity = "0";
     p2.style.opacity = "0";
-    p1.href = "#"+window.location.hash.substring(1);
-    p2.href = "#"+window.location.hash.substring(1);
+    a1.removeAttribute("href");
+    a2.removeAttribute("href");
 });
