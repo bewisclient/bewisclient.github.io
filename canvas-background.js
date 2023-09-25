@@ -39,8 +39,8 @@ function draw() {
     c.height = height;
 
     var grd = ctx.createRadialGradient(width/2, height/3, radian/2, width/2, height/3,radian);
-    grd.addColorStop(0, "#28324b");
-    grd.addColorStop(1, "#181f3d");
+    grd.addColorStop(0, "#0e323c");
+    grd.addColorStop(1, "#1e2d36");
 
     ctx.beginPath();
     ctx.arc(width/2, height/3, radian, 0, 2 * Math.PI);
